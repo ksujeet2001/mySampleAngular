@@ -1,0 +1,34 @@
+<html ng-app="myApp">
+<head>
+    <script src="../angular-1.6.9/angular.js"></script>
+    </head>
+
+<body>
+   <div ng-controller="MainCtrl"> 
+        <h1>Hello Angular!!</h1>
+        <p ng-if="hourOfDay < 12">Good morning</p>
+         <p ng-if="hourOfDay > 17">Good evening</p>
+        <P>The hour of day is: <span ng-bind="hourOfDay"></span></P>
+        <P>The hour of day is: {{hourOfDay}}</P>
+        <P  ng-bind="hourOfDay">The hour of day is: {{hourOfDay}}</P>
+       <P>Current Time is : {{currTime}}</P>
+    </div>
+    
+    <script>
+       // console.log(angular);
+        var module= angular.module("myApp",[]);
+        module.controller("MainCtrl",Main);
+       
+        
+        function Main($scope){
+            console.log("main function");          
+             $scope.hourOfDay=18;
+            $scope.currTime=(new Date()).toTimeString();
+        }
+    
+    
+    </script>
+    
+    </body>
+
+</html>

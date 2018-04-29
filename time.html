@@ -1,0 +1,36 @@
+ <html ng-app="myApp">
+<head>
+    <script src="../angular-1.6.9/angular.js"></script>
+    <script src="app.js"></script>
+   
+    </head>
+
+<body>
+   <div ng-controller="MainCtrl"> 
+       Please enter your name: <input type="text" ng-model="myName"></input> 
+        <p>Checkbox: <input type="checkbox" ng-model="testBoolean"></input> </p> 
+        <p>Date: <input type="date" ng-model="testDate"></input> </p> 
+        <button ng-click="updateTime()">Refresh Time</button>
+
+    <p>Date: 
+        <input type="radio" ng-model="radioValue" value="opt1">Option 1</input> 
+        <input type="radio" ng-model="radioValue" value="opt2">Option 2</input> 
+        <input type="radio" ng-model="radioValue" value="opt3">Option 3</input> 
+
+
+    </p> 
+    
+
+    <P>Current Time is : {{currTime}}</P>
+    <p>Welcome: {{myName}}</p>
+     <p>Boolean: {{testBoolean}}</p>
+    <p>Date: {{testDate}}</p>
+    <p>Radio: {{radioValue}}</p>
+    </div> 
+    
+       
+    </body>
+
+</html>
+ 
+ 
